@@ -1,7 +1,7 @@
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 
-const GetInfo = ({setVR, setAR}) => {
+const ArListener = ({setVR, setAR}) => {
   const { gl } = useThree();
   useEffect(() => {
     gl.xr.addEventListener( 'sessionstart', () =>{
@@ -20,4 +20,4 @@ const GetInfo = ({setVR, setAR}) => {
   return null;
 };
 
-export default GetInfo;
+export default ArListener;
