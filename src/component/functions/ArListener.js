@@ -3,8 +3,10 @@ import { useEffect } from "react";
 
 const ArListener = ({setVR, setAR}) => {
   const { gl } = useThree();
+  
   useEffect(() => {
     gl.xr.addEventListener( 'sessionstart', () =>{
+        console.trace();
         console.log('entro ar');
         setVR([0,0,0]);
         setAR([0.4,0.4,0.4]);
