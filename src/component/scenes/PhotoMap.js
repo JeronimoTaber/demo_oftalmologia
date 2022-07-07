@@ -48,7 +48,7 @@ const PhotoMap = () => {
         <directionalLight color={"#ffffff"} position={[0, 0, 5]} />
         <ambientLight color={"#ffffff"} />
         <directionalLight brightness={2.6} color={"#bdefff"}position={[0, 5, 0]} />
-          <group >
+          <group  scale={vr} >
             <Suspense>
                 <Dome />
                 <MesaAlt  position={[12, -14, -3]}  rotation={[0,1.57,0]}  onClick={startAR}/>
@@ -56,7 +56,7 @@ const PhotoMap = () => {
           </group>
         <group position={[1, 0.2, 0]} scale={ar}>
           <Suspense fallback={null}>
-            <EyeModel  rotation={[0, -180, 180]} />
+            <EyeModel  rotation={[0, 1.57, 1.57]} />
           </Suspense>
         </group>
         <OrbitControls target={[0, 0, -0.3]} />
